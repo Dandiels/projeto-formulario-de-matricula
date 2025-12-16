@@ -52,10 +52,10 @@ img
 
 .flex-1
 {
-    flex: 1;
+    flex: calc(176 / 508);
 }
 
 .flex-2
 {
-    flex: 2;
+    flex: calc(332 / 508);
 }

@@ -36,6 +36,7 @@
         </p>
 
         <form method="post" enctype="multipart/form-data">
+          
           <fieldset class="child-info">
 
             <legend>Informações da criança</legend>
@@ -128,6 +129,7 @@
                 id="cep"
                 name="cep"
                 type="text"
+                placeholder="01234-567"
               />
 
             </div>
@@ -195,6 +197,62 @@
             </div>
 
           </fieldset>
+
+          <fieldset class="parent-info">
+
+            <legend>Informações do responsável</legend>
+
+            <div class="input-wrapper">
+
+              <label for="parent">Nome do responsável</label>
+
+              <input
+                id="parent"
+                name="parent"
+                type="text"
+                placeholder="Qual o nome do responsável?"
+              />
+
+              <small>Principal responsável legal e contato de emergência</small>
+
+            </div>
+
+            <div class="input-wrapper">
+
+              <label for="phone">Telefone</label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="(10) 9 8765-4321"
+              />
+
+            </div>
+
+            <div class="input-wrapper">
+
+              <label for="email">E-mail</label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Qual o e-mail do responsável?"
+                required
+              />
+
+              <div class="error">
+
+                <img src="assets/icons/alert-circle.svg" alt="Ícone de Alerta Vermelho">
+                <span>Insira um e-mail válido</span>
+
+              </div>
+
+            </div>
+
+          </fieldset>
+
         </form>
         
       </div>
