@@ -1,17 +1,24 @@
+/* 
+  Wrapper dos termos e condições:
+  organiza checkbox e texto associado
+*/
 .terms-wrapper
 {
     margin-top: 3rem;
+
+    /* Layout horizontal */
     display: flex;
     gap: 0.75rem;
     align-items: flex-start;
 
+    /* Label do texto dos termos */
     & label
     {
         font: var(--text);
-        
         margin: 0;
     }
 
+    /* Destaque para links ou trechos importantes */
     & strong
     {
         font: 500 1rem/1.5 var(--font-family);
@@ -19,10 +26,18 @@
     }
 }
 
+/* 
+  Wrapper do checkbox customizado
+*/
 .checkbox-wrapper
 {
+    /* Necessário para posicionar o input absoluto */
     position: relative;
 
+    /* 
+      Input invisível:
+      mantém acessibilidade e captura de clique/foco
+    */
     & [type="checkbox"]
     {
         all: unset;
@@ -30,14 +45,23 @@
         inset: 0;
     }
 
+    /* 
+      Representação visual do checkbox
+    */
     .checkbox-image
     {
+        /* Tamanho fixo */
         flex: 0 0 1.5rem;
         height: 1.5rem;
 
+        /* Ícone padrão (desmarcado) */
         background-image: url(../../assets/icons/square.svg);
     }
 
+    /* 
+      Estados interativos:
+      hover e foco via teclado
+    */
     &:hover, &:focus-within
     {
         .checkbox-image
@@ -46,6 +70,9 @@
         }
     }
 
+    /* 
+      Estado marcado (checked)
+    */
     &:has(:checked) .checkbox-image
     {
         background-image: url(../../assets/icons/checkmark-square-01.svg);

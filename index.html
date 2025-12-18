@@ -1,27 +1,38 @@
+<!-- Declara o documento como HTML5 -->
 <!DOCTYPE html>
+<!-- Define o idioma principal do documento como português do Brasil -->
 <html lang="pt-BR">
 
 <head>
   
+  <!-- Otimização de performance: pré-conexão com servidores do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
+  <!-- Configuração de codificação de caracteres -->
   <meta charset="UTF-8">
+  <!-- Configuração para layout responsivo em dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título exibido na aba do navegador -->
   <title>Estrelas do Amanhã</title>
 
+  <!-- Importação do arquivo CSS principal -->
   <link rel="stylesheet" href="styles/index.css">
+  <!-- Importação das fontes utilizadas no projeto -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+  <!-- Container geral da aplicação -->
   <div id="app">
 
+    <!-- Conteúdo principal da página -->
     <main>
       <div class="main-container">
 
+        <!-- Botão visual de voltar -->
         <div class="back">
 
           <img src="assets/icons/arrow-left-02.svg" alt="Ícone de Voltar">
@@ -29,19 +40,25 @@
 
         </div>
 
+        <!-- Título principal do formulário -->
         <h1>Formulário de matrícula</h1>
 
+        <!-- Texto explicativo do formulário -->
         <p>
           Preencha os dados abaixo para matricular seu filho na escola de 
           educação infantil Estrelas do Amanhã.
         </p>
 
+        <!-- Formulário principal -->
+        <!-- multipart/form-data é necessário para envio de arquivos -->
         <form method="post" enctype="multipart/form-data">
           
+          <!-- Agrupamento: Informações da criança -->
           <fieldset class="child-info">
 
             <legend>Informações da criança</legend>
 
+            <!-- Campo: Nome completo -->
             <div class="input-wrapper">
 
               <label for="fullname">Nome completo</label>
@@ -55,6 +72,7 @@
 
             </div>
             
+            <!-- Campo: Data de nascimento -->
             <div class="input-wrapper">
 
               <label for="birth">Data de nascimento</label>
@@ -68,6 +86,7 @@
 
             </div>
 
+            <!-- Campo: Sexo -->
             <div class="select-wrapper">
               
               <label for="gender">Sexo</label>
@@ -80,6 +99,7 @@
 
             </div>
 
+            <!-- Campo: Informações médicas -->
             <div class="textarea-wrapper">
               
               <label for="medical-info">Informações médicas</label>
@@ -94,14 +114,17 @@
             
             </div>
 
+            <!-- Campo: Upload da certidão de nascimento -->
             <div class="droparea-wrapper">
 
               <label for="birth-file">Certidão de nascimento</label>
 
+              <!-- Área customizada para upload -->
               <div class="dropzone">
 
                 <input id="birth-file" name="birth-file" type="file">
 
+                <!-- Ícone ilustrativo de upload -->
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M34.9552 18.0221C34.97 18.022 34.985 18.022 35 18.022C39.9706 18.022 44 22.0588 44 27.0386C44 31.6796 40.5 35.5016 36 36M34.9552 18.0221C34.9848 17.6921 35 17.3579 35 17.0202C35 10.9339 30.0752 6 24 6C18.2465 6 13.5247 10.4253 13.0408 16.0638M34.9552 18.0221C34.7506 20.2952 33.8572 22.3692 32.4856 24.033M13.0408 16.0638C7.96796 16.5475 4 20.8278 4 26.0366C4 30.8834 7.43552 34.9264 12 35.8546M13.0408 16.0638C13.3565 16.0337 13.6765 16.0183 14 16.0183C16.2516 16.0183 18.3295 16.7639 20.001 18.022" stroke="#D6D3D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M24 26V42M24 26C22.5996 26 19.9831 29.9886 19 31M24 26C25.4004 26 28.017 29.9886 29 31" stroke="#D6D3D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -118,10 +141,12 @@
 
           </fieldset>
 
+          <!-- Agrupamento: Endereço residencial -->
           <fieldset class="address">
 
             <legend>Endereço residencial</legend>
 
+            <!-- Campo: CEP -->
             <div class="input-wrapper">
 
               <label for="cep">CEP</label>
@@ -135,6 +160,7 @@
 
             </div>
 
+            <!-- Linha flexível: Rua e Número -->
             <div class="flex">
 
               <div class="input-wrapper flex-2">
@@ -165,6 +191,7 @@
 
             </div>
 
+            <!-- Linha flexível: Cidade e Estado -->
             <div class="flex">
 
               <div class="input-wrapper flex-2">
@@ -199,10 +226,12 @@
 
           </fieldset>
 
+          <!-- Agrupamento: Informações do responsável -->
           <fieldset class="parent-info">
 
             <legend>Informações do responsável</legend>
 
+            <!-- Campo: Nome do responsável -->
             <div class="input-wrapper">
 
               <label for="parent">Nome do responsável</label>
@@ -218,6 +247,7 @@
 
             </div>
 
+            <!-- Campo: Telefone -->
             <div class="input-wrapper">
 
               <label for="phone">Telefone</label>
@@ -231,6 +261,7 @@
 
             </div>
 
+            <!-- Campo: E-mail -->
             <div class="input-wrapper">
 
               <label for="email">E-mail</label>
@@ -243,6 +274,7 @@
                 required
               />
 
+              <!-- Mensagem de erro visual -->
               <div class="error">
 
                 <img src="assets/icons/alert-circle.svg" alt="Ícone de Alerta Vermelho">
@@ -254,18 +286,22 @@
 
           </fieldset>
 
+          <!-- Agrupamento das opções relacionadas à matrícula -->
           <fieldset class="enroll-options">
 
             <legend>Opções de matrícula</legend>
 
+            <!-- Seleção do turno de estudo -->
             <div class="input-wrapper">
 
               <label>Selecione o turno de estudo</label>
 
+              <!-- Container dos botões de rádio -->
               <div class="radio-wrapper">
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio (estilizado via CSS) -->
                   <div class="radio-image"></div>
 
                   <input
@@ -275,6 +311,7 @@
                     value="morning"
                   />
 
+                  <!-- Ícone ilustrativo do turno da manhã -->
                   <img src="assets/icons/sun-cloud-02.svg" alt="Ícone de Sol com Nuvem">
 
                   <label for="morning">Manhã</label>
@@ -283,6 +320,7 @@
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio (estilizado via CSS) -->
                   <div class="radio-image"></div>
 
                   <input
@@ -292,6 +330,7 @@
                     value="evening"
                   />
 
+                  <!-- Ícone ilustrativo do turno da tarde -->
                   <img src="assets/icons/sun-02.svg" alt="Ícone de Sol">
 
                   <label for="evening">Tarde</label>
@@ -302,14 +341,17 @@
 
             </div>
 
+            <!-- Seleção do esporte extracurricular -->
             <div class="input-wrapper">
 
               <label>Em qual esporte você gostaria de inscrever seu filho?</label>
 
+              <!-- Container dos botões de rádio -->
               <div class="radio-wrapper">
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio -->
                   <div class="radio-image"></div>
 
                   <input
@@ -319,6 +361,7 @@
                     value="football"
                   />
 
+                  <!-- Ícone ilustrativo do esporte futebol -->
                   <img src="assets/icons/football.svg" alt="Ícone de Bola de Futebol">
 
                   <label for="football">Futebol</label>
@@ -327,6 +370,7 @@
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio -->
                   <div class="radio-image"></div>
 
                   <input
@@ -336,6 +380,7 @@
                     value="basketball"
                   />
 
+                  <!-- Ícone ilustrativo do esporte basquete -->
                   <img src="assets/icons/basketball-02.svg" alt="Ícone de Bola de Basquete">
 
                   <label for="basketball">Basquete</label>
@@ -344,6 +389,7 @@
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio -->
                   <div class="radio-image"></div>
 
                   <input
@@ -353,6 +399,7 @@
                     value="swimming"
                   />
 
+                  <!-- Ícone ilustrativo do esporte natação -->
                   <img src="assets/icons/swimming.svg" alt="Ícone de Pessoa Nadando">
 
                   <label for="swimming">Natação</label>
@@ -361,6 +408,7 @@
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio -->
                   <div class="radio-image"></div>
 
                   <input
@@ -370,6 +418,7 @@
                     value="yoga"
                   />
 
+                  <!-- Ícone ilustrativo do esporte yoga -->
                   <img src="assets/icons/yoga-02.svg" alt="Ícone de Pessoa Meditando">
 
                   <label for="yoga">Yoga</label>
@@ -378,6 +427,7 @@
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio -->
                   <div class="radio-image"></div>
 
                   <input
@@ -387,6 +437,7 @@
                     value="volleyball"
                   />
 
+                  <!-- Ícone ilustrativo do esporte vôlei -->
                   <img src="assets/icons/volleyball.svg" alt="Ícone de Bola de Vôlei">
 
                   <label for="volleyball">Vôlei</label>
@@ -395,6 +446,7 @@
 
                 <div class="radio-inner">
 
+                  <!-- Elemento visual customizado do rádio -->
                   <div class="radio-image"></div>
 
                   <input
@@ -404,6 +456,7 @@
                     value="boxing"
                   />
 
+                  <!-- Ícone ilustrativo do esporte boxe -->
                   <img src="assets/icons/boxing-glove-01.svg" alt="Ícone de Luva de Boxe">
 
                   <label for="boxing">Boxe</label>
@@ -416,6 +469,7 @@
 
           </fieldset>
 
+          <!-- Aceite dos termos -->
           <div class="terms-wrapper input-wrapper checkbox-wrapper">
 
             <div class="checkbox-image"></div>
@@ -433,6 +487,7 @@
 
           </div>
 
+          <!-- Botões de ação -->
           <div class="actions-wrapper">
 
             <button class="btn-secondary" type="button">
@@ -450,6 +505,7 @@
       </div>
     </main>
 
+    <!-- Conteúdo complementar -->
     <aside>
       <div class="aside-container">
         

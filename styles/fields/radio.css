@@ -1,13 +1,22 @@
+/* 
+  Ajustes específicos para labels dentro do fieldset
+  de opções de matrícula
+*/
 .enroll-options label
 {
     margin: 0;
 }
 
+/* Espaçamento entre o label do grupo e os radios */
 label + .radio-wrapper
 {
     margin-top: 1rem;
 }
 
+/* 
+  Wrapper dos radios:
+  layout responsivo em grid
+*/
 .radio-wrapper
 {
     display: grid;
@@ -15,19 +24,30 @@ label + .radio-wrapper
     gap: 1rem;
 }
 
+/* 
+  Card individual do radio customizado
+*/
 .radio-inner
 {
+    /* Borda e formato */
     border: 1px solid var(--stroke-default);
     border-radius: 0.5rem;
 
+    /* Layout interno centralizado */
     display: grid;
     justify-items: center;
     gap: 0.5rem;
 
+    /* Espaçamento interno */
     padding: 2rem 1rem 1rem;
 
+    /* Necessário para posicionamento absoluto dos elementos internos */
     position: relative;
-    
+
+    /* 
+      Input invisível cobrindo todo o card:
+      mantém acessibilidade e captura de clique/foco
+    */
     & input, & input:focus, & input:hover
     {
         all: unset;
@@ -35,6 +55,9 @@ label + .radio-wrapper
         inset: 0;
     }
 
+    /* 
+      Ícone visual do estado do radio
+    */
     .radio-image
     {
         background-image: url(../../assets/icons/circle.svg);
@@ -47,6 +70,9 @@ label + .radio-wrapper
         left: 0.5rem;
     }
 
+    /* 
+      Estado hover e foco via teclado
+    */
     &:hover, &:focus-within
     {
         border: 1px solid var(--stroke-highlight);
@@ -57,6 +83,9 @@ label + .radio-wrapper
         }
     }
 
+    /* 
+      Estado selecionado (checked)
+    */
     &:has(:checked)
     {
         border: 2px solid var(--stroke-highlight);
@@ -67,6 +96,9 @@ label + .radio-wrapper
         }
     }
 
+    /* 
+      Label interno do radio
+    */
     & label
     {
         font: 500 1rem/1.5 'Montserrat', sans-serif;

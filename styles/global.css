@@ -1,3 +1,8 @@
+/* 
+  Reset global:
+  Remove margens e espaçamentos padrões dos navegadores
+  e define o box model como border-box para facilitar cálculos de layout.
+*/
 *
 {
     margin: 0;
@@ -5,27 +10,42 @@
     box-sizing: border-box;
 }
 
+/* 
+  Variáveis globais do projeto (CSS Custom Properties):
+  Centralizam tipografia, cores e tokens de design,
+  facilitando manutenção e consistência visual.
+*/
 :root
 {
+    /* Tipografia base */
     --font-family: 'Poppins', sans-serif;
     --text: 400 1rem/1.5 var(--font-family);
     --text-sm: 400 0.875rem/1.4 var(--font-family);
 
+    /* Cores de texto */
     --text-primary: #292524;
     --text-secondary: #57534E;
     --text-tertiary: #8F8881;
     --text-highlight: #E43A12;
 
+    /* Cores de superfície (backgrounds) */
     --surface-primary: #FFFFFF;
     --surface-secondary: #FEE7D6;
     --surface-disabled: #E7E5E4;
 
+    /* Cores de borda (strokes) */
     --stroke-default: #D6D3D1;
     --stroke-highlight: #F3541C;
 
+    /* Cores semânticas */
     --semantic-error: #DC2626;
 }
 
+/* 
+  Estilos globais do body:
+  - Remove rolagem da página (layout controlado pelo container)
+  - Define fonte e cor de texto padrão
+*/
 body
 {
     overflow: hidden;
@@ -34,27 +54,48 @@ body
     color: var(--text-secondary);
 }
 
+/* 
+  Estilo padrão para títulos principais:
+  Garante maior contraste e hierarquia visual.
+*/
 h1, h2
 {
     color: var(--text-primary);
 }
 
+/* 
+  Tratamento padrão para imagens:
+  Evita overflow e mantém proporção original.
+*/
 img
 {
     max-width: 100%;
     height: auto;
 }
 
+/* 
+  Classe utilitária para layouts flexíveis:
+  Facilita alinhamento horizontal de elementos.
+*/
 .flex
 {
     display: flex;
 }
 
+/* 
+  Classe utilitária:
+  Define proporção menor de largura em containers flex.
+*/
 .flex-1
 {
     flex: calc(176 / 508);
 }
 
+/* 
+  Classe utilitária:
+  Define proporção maior de largura em containers flex,
+  normalmente usada para campos mais longos.
+*/
 .flex-2
 {
     flex: calc(332 / 508);

@@ -1,5 +1,40 @@
+/* 
+  Arquivo agregador dos estilos de campos do formulário.
+  Centraliza a importação de todos os componentes de input,
+  facilitando manutenção e escalabilidade.
+*/
+
+/* 
+  Estilos base para campos de entrada:
+  - Inputs de texto, email, número, senha, etc.
+  - Estados de foco, erro e desabilitado
+*/
 @import url(input.css);
+
+/* 
+  Estilos da área de upload (drop area):
+  - Arrastar e soltar arquivos
+  - Estados visuais de hover e foco
+*/
 @import url(droparea.css);
+
+/* 
+  Estilos para inputs do tipo radio:
+  - Customização visual
+  - Estados checked, hover e disabled
+*/
 @import url(radio.css);
+
+/* 
+  Estilos para inputs do tipo checkbox:
+  - Customização visual
+  - Estados checked, indeterminate e disabled
+*/
 @import url(checkbox.css);
+
+/* 
+  Estilos para botões:
+  - Botões primários e secundários
+  - Estados hover, focus e disabled
+*/
 @import url(button.css);

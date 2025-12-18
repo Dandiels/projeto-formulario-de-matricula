@@ -1,36 +1,56 @@
+/* 
+  Container raiz da aplicação:
+  Utiliza CSS Grid para dividir a tela em duas colunas
+  (conteúdo principal + área institucional).
+*/
 #app
 {
     display: grid;
     grid-template-columns: 51.25% 48.75%;
     
+    /* Ocupa toda a altura da viewport */
     height: 100vh;
+
+    /* Evita rolagem global; o scroll é controlado internamente */
     overflow: hidden;
 }
 
+/* 
+  Área principal do formulário:
+  Responsável pelo conteúdo interativo da página.
+*/
 main
 {
+    /* Permite rolagem apenas no conteúdo principal */
     overflow: auto;
+
+    /* Espaçamento interno consistente */
     padding: 4rem;
 
+    /* Container interno para limitar largura do conteúdo */
     & .main-container
     {
         max-width: 33rem;
         margin-left: auto;
     }
 
+    /* Área de navegação visual (botão voltar) */
     & .back
     {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+
         margin-bottom: 1.5rem;
 
+        /* Texto do botão de voltar */
         & span
         {
             width: 3rem;
         }
     }
 
+    /* Estilo do título principal do formulário */
     & h1
     {
         font: 600 1.5rem/1.25 var(--font-family);
@@ -38,19 +58,29 @@ main
     }
 }
 
+/* 
+  Área lateral complementar (aside):
+  Utilizada para branding e conteúdo institucional.
+*/
 aside
 {
+    /* Cor de fundo diferenciada para separação visual */
     background-color: var(--surface-secondary);
+
+    /* Espaçamento interno */
     padding: 4rem;
 
+    /* Container interno do aside */
     & .aside-container
     {
         max-width: 31rem;
+
         display: flex;
         flex-direction: column;
         gap: 2rem;
     }
 
+    /* Cabeçalho do aside */
     & header
     {
         display: flex;
@@ -59,10 +89,12 @@ aside
         gap: 0.5rem;
     }
 
+    /* Título principal do aside */
     & h2
     {
         font: 600 2.5rem/1.25 var(--font-family);
 
+        /* Destaque visual em parte do texto */
         & span
         {
             color: var(--text-highlight);

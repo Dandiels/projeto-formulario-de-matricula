@@ -1,44 +1,69 @@
+/* 
+  Área de upload (dropzone):
+  Permite seleção de arquivos por clique ou arrastar e soltar
+*/
 .dropzone
 {
+    /* Estilo visual padrão */
     border: 2px dashed transparent;
     outline: 1px dashed var(--stroke-default);
     border-radius: 0.5rem;
 
+    /* Layout centralizado */
     display: grid;
     justify-items: center;
     align-items: center;
     gap: 0.5rem;
 
+    /* Texto centralizado */
     text-align: center;
+
+    /* Espaçamento interno */
     padding: 1.5rem 1rem;
 
+    /* Necessário para posicionar o input absoluto */
     position: relative;
 
+    /* 
+      Input invisível sobre toda a área:
+      captura cliques e eventos de foco
+    */
     & input
     {
         position: absolute;
+        inset: 0;
+
         width: 100%;
         height: 100%;
-        inset: 0;
+
         opacity: 0;
     }
 
+    /* Texto auxiliar */
     & p
     {
         color: #A8A29E;
     }
 
+    /* 
+      Estados interativos:
+      - Hover do mouse
+      - Foco no input (acessibilidade via teclado)
+    */
     &:hover, &:has(input:focus)
     {
+        /* Destaque visual da área */
         outline-width: 0;
         border-color: var(--stroke-highlight);
         background-color: var(--surface-secondary);
 
+        /* Destaque do ícone SVG */
         & svg path
         {
             stroke: #F67841;
         }
-        
+
+        /* Destaque do texto */
         & p
         {
             color: var(--text-tertiary);

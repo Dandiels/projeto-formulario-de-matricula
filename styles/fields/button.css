@@ -1,28 +1,51 @@
+/* 
+  Estilo base para botões:
+  remove estilos nativos e define padrão visual
+*/
 button
 {
+    /* Remove estilos padrão do navegador */
     all: unset;
+
+    /* Tipografia */
     font: 500 1rem/1.5 var(--font-family);
+
+    /* Espaçamento interno e formato */
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
+
+    /* Indica elemento interativo */
     cursor: pointer;
 
+    /* 
+      Variação: botão secundário
+    */
     &.btn-secondary
     {
+        /* Alinha o botão à direita quando usado em flex */
         margin-left: auto;
+
+        /* Estilo visual */
         color: var(--text-highlight);
         border: 1px solid var(--text-highlight);
 
+        /* Estados interativos */
         &:hover, &:focus
         {
             outline: 0.25rem solid var(--surface-secondary);
         }
     }
 
+    /* 
+      Variação: botão primário
+    */
     &.btn-primary
     {
+        /* Estilo visual */
         color: var(--surface-primary);
         background-color: #E43A12;
 
+        /* Estados interativos */
         &:hover, &:focus
         {
             background-color: #F3541C;

@@ -1,10 +1,23 @@
+/* 
+  Importação dos estilos específicos dos campos do formulário:
+  Inputs, selects, textareas, radios, checkboxes e estados visuais.
+*/
 @import url(fields/index.css);
 
+/* 
+  Estilo base do formulário:
+  Cria um espaçamento entre o texto introdutório e os campos.
+*/
 form
 {
     margin-top: 3rem;
 }
 
+/* 
+  Estilo base para todos os fieldsets:
+  - Remove a borda padrão do navegador
+  - Organiza os campos em grid vertical
+*/
 fieldset
 {
     border: none;
@@ -13,6 +26,10 @@ fieldset
     gap: 1.5rem;
 }
 
+/* 
+  Estilo dos legends:
+  Define hierarquia visual e separação clara entre seções.
+*/
 legend
 {
     font: 600 1rem/1.25 var(--font-family);
@@ -20,11 +37,20 @@ legend
     margin-bottom: 1.5rem;
 }
 
+/* 
+  Espaçamento vertical entre seções consecutivas do formulário:
+  Aplica margem apenas quando um fieldset sucede outro.
+*/
 fieldset + fieldset
 {
     margin-top: 3rem;
 }
 
+/* 
+  Container dos botões de ação do formulário:
+  - Organiza os botões horizontalmente
+  - Define espaçamento e separação visual do restante do formulário
+*/
 .actions-wrapper
 {
     margin-top: 3rem;

@@ -1,3 +1,29 @@
+/* 
+  Arquivo CSS principal do projeto.
+  Responsável por centralizar a importação dos demais estilos,
+  funcionando como ponto de entrada (entry point) do CSS.
+*/
+
+/* 
+  Estilos globais:
+  - Reset ou normalização
+  - Variáveis CSS (cores, fontes, espaçamentos)
+  - Estilos base para body, html, headings, etc.
+*/
 @import url(global.css);
+
+/* 
+  Estilos de layout:
+  - Estrutura geral da página
+  - Grid ou flexbox principal
+  - Organização entre main e aside
+*/
 @import url(layout.css);
+
+/* 
+  Estilos específicos do formulário:
+  - Inputs, labels, fieldsets
+  - Radios, checkboxes customizados
+  - Botões e mensagens de erro
+*/
 @import url(form.css);
