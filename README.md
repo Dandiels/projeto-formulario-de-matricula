@@ -1,4 +1,4 @@
-# Formulário de Matrícula
+# Página de Formulário de Matrícula
 
 Este é um projeto de um formulário de matrícula, desenvolvido com **HTML** e **CSS**. O formulário permite selecionar turno de estudo, modalidade esportiva, preencher dados pessoais e aceitar termos, utilizando componentes customizados como radios, checkboxes, inputs e área de upload. O layout foi projetado com foco em organização, acessibilidade e boa experiência do usuário.
 
